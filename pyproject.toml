@@ -1,0 +1,30 @@
+[project]
+name = "llm-tools-kiwix"
+version = "0.1"
+description = "Expose offline wiki and stack exchange archives to llms."
+readme = "README.md"
+authors = [{name = "M.Ozan Unal"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.9"
+dependencies = [
+    "llm>=0.26",
+    "libzim>=3.5",
+    "strip-tags>=0.6"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/mozanunal/llm-tools-kiwix"
+Changelog = "https://github.com/mozanunal/llm-tools-kiwix/releases"
+Issues = "https://github.com/mozanunal/llm-tools-kiwix/issues"
+CI = "https://github.com/mozanunal/llm-tools-kiwix/actions"
+
+[project.entry-points.llm]
+llm_tools_kiwix = "llm_tools_kiwix"
+
+[project.optional-dependencies]
+test = ["pytest", "llm-echo>=0.3a1"]
